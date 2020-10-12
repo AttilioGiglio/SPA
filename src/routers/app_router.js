@@ -5,7 +5,7 @@ import {
     Route
   } from "react-router-dom";
 import Login from '../components/login/login';
-import Marvel from '../components/marvel/marvel';
+import DashboardRoutes from './dashboard_routes';
 
 const AppRouter = () => {
     return (
@@ -13,7 +13,7 @@ const AppRouter = () => {
             <div>
             <Switch>
                 <Route exact path='/login' component={Login} />
-                <Route exact path='/' component={Marvel} />
+                <Route path='/' component={DashboardRoutes} />
             </Switch>
             </div>
         </Router>

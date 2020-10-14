@@ -13,7 +13,7 @@ const DashboardRoutes = () => {
             <div className="container mt-2">
                 <Switch>
                     <Route exact path='/marvel' component={Marvel} />
-                    <Route exact path='/heroe/:heroeId' component={Heroe} />
+                    <Route exact path='/hero/:heroeId' component={Heroe} />
                     <Route exact path='/dc' component={Dc} />
 
                     <Redirect to='/marvel' />

@@ -1,9 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const HeroeCard = ({
     id,
     superhero,
-    publisher,
     alter_ego,
     first_appearance,
     characters
@@ -12,7 +12,7 @@ const HeroeCard = ({
         <div className='card ms-3' style={{ maxWidth: '540px' }}>
             <div className='row no-gutters'>
                 <div className='col-md-4'>
-                    <img src={`./assets/heroes/${id}.jpg`} className='card-img' alt={superhero} />
+                    <img style={{width:'100%', height:'100%'}} src={`./assets/heroes/${id}.jpg`} className='card-img' alt={superhero} />
                 </div>
                 <div className='col-md-8'>
                     <div className='card-body'>
@@ -23,6 +23,12 @@ const HeroeCard = ({
                             && <p className='card-text'> {characters} </p>
                         }
                     </div>
+                    <p className='card-text'>
+                        <small className='text-muted'>{first_appearance}</small>
+                    </p>
+                    <Link to={`./hero/${id}`}>
+                       Más... 
+                    </Link>
                 </div>
             </div>
             { superhero}

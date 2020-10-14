@@ -1,14 +1,14 @@
 import React from 'react'
 import HeroeList from '../heroes/heroe_list'
 
-const Marvel = () => {
+const Dc = () => {
     return (
         <div>
-            <h1>Marvel</h1>
+            <h1>DC</h1>
             <hr />
-            <HeroeList publisher={'Marvel Comics'} />
+            <HeroeList publisher={'DC Comics'} />
         </div>
     )
 }
 
-export default Marvel
+export default Dc

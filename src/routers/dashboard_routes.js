@@ -1,23 +1,26 @@
 import React from 'react';
 import Navbar from '../components/ui/navbar';
-import { BrowserRouter as Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Marvel from '../components/marvel/marvel';
-import Heroe from '../components/dc/heroe';
+import Heroe from '../components/heroes/heroe';
+import Dc from '../components/dc/dc';
 
 const DashboardRoutes = () => {
     return (
         <>
-        <Navbar />
-        <div>
-        <Switch>
-            <Route exact path='/marvel' component={Marvel} />
-            <Route exact path='/heroe/:heroeId' component={Heroe} />
-            <Route exact path='/dc' component={Heroe} />
-            <Redirect to='/marvel' />
-            </Switch>
+            <Navbar />
+
+            <div className="container mt-2">
+                <Switch>
+                    <Route exact path='/marvel' component={Marvel} />
+                    <Route exact path='/heroe/:heroeId' component={Heroe} />
+                    <Route exact path='/dc' component={Dc} />
+
+                    <Redirect to='/marvel' />
+                </Switch>
             </div>
         </>
-        
+
     )
 }
 

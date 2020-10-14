@@ -7,9 +7,9 @@ const Heroe = () => {
     const {heroeId} = useParams();
     const hero = getHeroeById( heroeId ); 
 
-    // if ( !hero ){
-    //     return <Redirect to='/'
-    // }
+    if ( !hero ){
+        return <Redirect to='/' />
+    }
 
     console.log(hero)
     return (

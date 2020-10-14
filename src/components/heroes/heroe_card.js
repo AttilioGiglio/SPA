@@ -12,7 +12,7 @@ const HeroeCard = ({
         <div className='card ms-3' style={{ maxWidth: '540px' }}>
             <div className='row no-gutters'>
                 <div className='col-md-4'>
-                    <img style={{width:'100%', height:'100%'}} src={`./assets/heroes/${id}.jpg`} className='card-img' alt={superhero} />
+                    <img src={`./assets/${id}.jpg`} className='card-img' alt={superhero} />
                 </div>
                 <div className='col-md-8'>
                     <div className='card-body'>

@@ -13,12 +13,10 @@ const Heroe = ({history}) => {
     }
 
     const { 
-        id,
         superhero,
         alter_ego,
         first_appearance,
         publisher,
-        characters
     } = hero;
 
     const handleReturn = () => {

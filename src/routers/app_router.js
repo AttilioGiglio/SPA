@@ -3,9 +3,10 @@ import {
     BrowserRouter as Router,
     Switch,
     Route
-  } from "react-router-dom";
+} from "react-router-dom";
 import Login from '../components/login/login';
 import DashboardRoutes from './dashboard_routes';
+import PrivateRoute from './private_route';
 
 const AppRouter = () => {
     return (
@@ -13,7 +14,7 @@ const AppRouter = () => {
             <div>
             <Switch>
                 <Route exact path='/login' component={Login} />
-                <Route path='/' component={DashboardRoutes} />
+                <PrivateRoute path='/' component={DashboardRoutes} />
             </Switch>
             </div>
         </Router>

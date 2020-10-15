@@ -7,14 +7,16 @@ const Login = ({ history }) => {
     const { dispatch } = useContext(AuthContext)
 
     const handleLogin = (e) => {
-        // history.push('/');
+        
+        const lastPath = localStorage.getItem('lastPath') || '|';
+
         dispatch({
             type: types.login,
             payload: {
                 name: 'Attilio'
             }
         });
-        history.replace('/')
+        history.replace(lastPath)
     }
 
     return (

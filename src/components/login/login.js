@@ -1,20 +1,31 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../../auth/auth_context';
+import { types } from '../../types/types';
 
 const Login = ({ history }) => {
 
+    const { dispatch } = useContext(AuthContext)
+
     const handleLogin = (e) => {
-        history.push('/');
+        // history.push('/');
+        dispatch({
+            type: types.login,
+            payload: {
+                name: 'Attilio'
+            }
+        });
+        history.replace('/')
     }
 
     return (
         <div className='container mt-5' >
             <h1>Login</h1>
-            <hr/>
+            <hr />
             <button
-            className='btn btn-primary'
-            onClick={handleLogin}
+                className='btn btn-primary'
+                onClick={handleLogin}
             >
-            Login
+                Login
             </button>
         </div>
     )
